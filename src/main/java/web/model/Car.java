@@ -7,15 +7,25 @@ public class Car {
     private String model;
     private String color;
     private int horsePower;
+    private String imagePath;
 
     public Car() {
     }
 
-    public Car(String marka, String model, String color, int horsePower) {
+    public Car(String marka, String model, String color, int horsePower, String imagePath) {
         this.marka = marka;
         this.model = model;
         this.color = color;
         this.horsePower = horsePower;
+        this.imagePath = imagePath;
+    }
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public String getMarka() {
@@ -52,7 +62,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return marka + " " + model + "\n" + "Цвет " + color + "\n" + "Мощность " + horsePower + " л/с";
+        return marka + " " + model + "<br>" + "Цвет " + color + "<br>" + "Мощность " + horsePower + " л/с";
     }
 
     @Override
